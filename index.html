@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Microlearning lesson on the Hummingbird Hawk-Moth."
+    />
+    <title>Hummingbird Hawk-Moth</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Base Styles */
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #111111;
+      }
+
+      header,
+      footer {
+        background-color: #1a4d1c;
+        color: #ffffff;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+
+      nav {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        padding: 0.8rem;
+        position: sticky; /* sticky nav */
+        top: 0;
+        z-index: 100; /* above content */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* subtle shadow */
+      }
+
+      nav a {
+        color: #ffffff;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        text-decoration: underline;
+        outline: 2px solid #ffd700;
+        outline-offset: 2px;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #ffffff;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        color: #1a4d1c;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 1.6rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto 1rem;
+        border-radius: 12px;
+        border: 2px solid #1a4d1c;
+        cursor: zoom-in;
+      }
+
+      video {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 1rem;
+        border: 2px solid #1a4d1c;
+      }
+
+      /* Quiz button styling */
+      #quiz button {
+        display: block;
+        margin: 0.5rem 0;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        border: 2px solid #1a4d1c;
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: #1a4d1c;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      #quiz button:hover,
+      #quiz button:focus {
+        background-color: #1a4d1c;
+        color: #ffffff;
+        outline: 2px solid #ffd700;
+        outline-offset: 2px;
+      }
+
+      #quiz-feedback {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 12px;
+      }
+
+      .modal:focus {
+        outline: none;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Hummingbird Hawk-Moth</h1>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <a href="#intro">Introduction</a>
+      <a href="#comparison">Quick Comparison</a>
+      <a href="#video">Video</a>
+      <a href="#facts">Fun Facts</a>
+      <a href="#quiz">Quick Quiz</a>
+    </nav>
+
+    <main role="main">
+      <section id="intro" aria-labelledby="intro-heading">
+        <img
+          src="Images/hawkmoth 2.jpg"
+          alt="Hummingbird hawk-moth hovering in front of a flower"
+          onclick="enlargeImage(this)"
+        />
+        <h2 id="intro-heading">Introduction</h2>
+        <p>
+          The <strong>Hummingbird Hawk-Moth</strong> (<em
+            >Macroglossum stellatarum</em
+          >) is frequently mistaken for a hummingbird because of its hovering
+          flight and rapid wingbeats. This microlearning module emphasizes its
+          distinctive behaviors and adaptations. You will learn to identify a
+          hummingbird hawkmoth and distinguish it from hummingbirds. Imagine
+          walking through a garden at dusk and seeing something darting between
+          flowers. At first, it appears to be a hummingbird— but is it? Use the
+          clues provided here to help identify the tiny creature.
+        </p>
+      </section>
+
+      <section id="comparison" aria-labelledby="comparison-heading">
+        <h2 id="comparison-heading">Moth or Bird? A Quick Comparison</h2>
+        <img
+          src="Images/Hawk-moth vs Hummingbird.png"
+          alt="Side-by-side comparison of a hummingbird with feathers and a hawk-moth with fuzz, showing beak versus proboscis."
+          onclick="enlargeImage(this)"
+        />
+        <p>
+          This side-by-side view highlights the key differences that help you
+          tell them apart.
+        </p>
+      </section>
+
+      <section id="video" aria-labelledby="video-heading">
+        <h2 id="video-heading">Watch the Moth in Action</h2>
+        <video
+          controls
+          aria-label="Video of a hummingbird hawk-moth feeding on flowers"
+        >
+          <source src="Hummingbird Hawk-Moth.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+        <p>
+          <em>Tip:</em> Observe how the moth hovers in front of flowers and
+          extends its proboscis to feed on nectar.
+        </p>
+      </section>
+
+      <section id="facts" aria-labelledby="facts-heading">
+        <h2 id="facts-heading">Fun Facts</h2>
+        <ul>
+          <li>Feeds on nectar while hovering like a hummingbird.</li>
+          <li>Has a long proboscis to reach deep flowers.</li>
+          <li>Active during the day, unlike most moths.</li>
+          <li>Wings beat up to 85 times per second.</li>
+        </ul>
+      </section>
+
+      <section id="quiz" aria-labelledby="quiz-heading">
+        <h2 id="quiz-heading">Quick Quiz</h2>
+        <p>
+          Which of the following is <strong>not</strong> a characteristic of the
+          Hummingbird Hawk-Moth?
+        </p>
+
+        <button onclick="checkAnswer(this, false)">
+          It can hover while feeding.
+        </button>
+        <button onclick="checkAnswer(this, false)">
+          It uses a long proboscis to drink nectar.
+        </button>
+        <button onclick="checkAnswer(this, true)">
+          It is active only at night.
+        </button>
+
+        <p id="quiz-feedback"></p>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Microlearning Demo | Hannah Kim</p>
+    </footer>
+
+    <!-- Modal for Enlarged Images -->
+    <div id="imageModal" class="modal" tabindex="0" aria-hidden="true">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <script>
+      function checkAnswer(button, isCorrect) {
+        const feedback = document.getElementById("quiz-feedback");
+        if (isCorrect) {
+          feedback.textContent =
+            "✅ Correct! The moth is active during the day, not only at night.";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "❌ Not quite. Try again!";
+          feedback.style.color = "red";
+        }
+      }
+
+      // Image enlargement functions
+      function enlargeImage(img) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modal.setAttribute("aria-hidden", "false");
+
+        modal.focus();
+        modal.onkeydown = function (e) {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        };
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+    </script>
+  </body>
+</html>
